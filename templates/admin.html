@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Area Admin</h1>
+<form method="POST" enctype="multipart/form-data">
+    <label for="image">Carica un nuovo vestito:</label>
+    <input type="file" name="image" id="image" required>
+    <label for="description">Descrizione:</label>
+    <input type="text" name="description" id="description" placeholder="Descrivi il vestito" required>
+    <button type="submit">Aggiungi</button>
+</form>
+{% endblock %}

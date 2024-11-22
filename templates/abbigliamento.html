@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Abbigliamento</h1>
+<form method="POST" class="search-bar">
+    <input type="text" name="search" placeholder="Cerca un capo" required>
+    <button type="submit">Cerca</button>
+</form>
+<div class="img-grid">
+    {% if results %}
+        {% for item in results %}
+            <div class="img-container">
+                <img src="{{ url_for('static', filename=item['image_path'].split('static/')[1]) }}" alt="Vestito">
+                <p>{{ item['description'] }}</p>
+            </div>
+        {% else %}
+            <p>Nessun risultato trovato.</p>
+        {% endfor %}
+    {% else %}
+        {% for item in data %}
+            <div class="img-container">
+                <img src="{{ url_for('static', filename=item['image_path'].split('static/')[1]) }}" alt="Vestito">
+                <p>{{ item['description'] }}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
