@@ -52,7 +52,6 @@ def search_clothing(query):
 
 
 def remove_background(image_file):
-
     # Apri l'immagine caricata
     input_image = image_file.read()
 
@@ -104,7 +103,6 @@ def admin():
             return redirect(url_for('admin'))
 
     return render_template('admin.html')
-
 
 
 if __name__ == '__main__':
