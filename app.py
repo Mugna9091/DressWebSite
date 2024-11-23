@@ -12,7 +12,7 @@ DATABASE_PATH = 'database/abbigliamento.json'
 # Inizializza il modello AI
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-
+#ciao pippo
 # Funzioni di utilità
 def load_data():
     if os.path.exists(DATABASE_PATH):
